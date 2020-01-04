@@ -1,14 +1,14 @@
 # Hypixel JavaScript API
 An easy-to-use Hypixel API Wrapper for Node.js.
-Fully made and coded with ❤ by `MineBlock64` !
+Coded with ❤ by `MineBlock64` !
 Version:  **0.1.3**
 
-## Install
+## Installation
 ```npm i hypixel-api-nodejs```
 
-## Use
-To use the commands, you need an API key, which can be obtained by typing */api new* in the Hypixel server.
-The datas returned by the function is a JavaScript Object already parsed that can be immediatly used.
+## Usage
+To use the commands, you need an API key that can be gathered by running */api new* on the Hypixel server.
+The value returned by the function is a JavaScript Object already parsed that can be immediatly used.
 
 ### Format
 Every functions have this format:
