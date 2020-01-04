@@ -48,7 +48,7 @@ Get guild informations from a members' UUID:
 hypixel.getGuildByPlayer(key, uuid);
 ```
 
-Get player's friends from its In-Game Name:
+Get player's friends from its In-Game Name:     (ATTENTION: This function use two requests, your key will then be used two times!)
 ```javascript
 hypixel.getFriendsByName(key, ign);
 ```
@@ -73,7 +73,7 @@ Get informations about every boosters currently active on the network:
 hypixel.getBoosters(key);
 ```
 
-Get session informations from player's UUID:      (WARNING: The endpoint of this is going to be deprecated as said on the Hypixel API GitHub)
+Get session informations from player's UUID:      (ATTENTION: The endpoint of this is going to be deprecated as said on the Hypixel API GitHub!)
 ```javascript
 hypixel.getSession(key, uuid);
 ```
