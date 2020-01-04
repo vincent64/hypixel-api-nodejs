@@ -38,7 +38,7 @@ const rp = require('request-promise');
 	}
 
 	exports.getGuildById = function(key, id) {
-		var apiUrl = "https://api.hypixel.net/guild?key=" + key + "&player=" + id;
+		var apiUrl = "https://api.hypixel.net/guild?key=" + key + "&id=" + id;
 		
 		return rp(apiUrl).then(body => {
             let responseData = JSON.parse(body);
@@ -47,7 +47,7 @@ const rp = require('request-promise');
 	}
 
 	exports.getFriendsByUuid = function(key, uuid) {
-		var apiUrl = "https://api.hypixel.net/friends?key=" + key + "&player=" + uuid;
+		var apiUrl = "https://api.hypixel.net/friends?key=" + key + "&uuid=" + uuid;
 		
 		return rp(apiUrl).then(body => {
             let responseData = JSON.parse(body);
@@ -56,11 +56,17 @@ const rp = require('request-promise');
 	}
 
 	exports.getFriendsByName = function(key, ign) {
-		var apiUrl = "https://api.hypixel.net/friends?key=" + key + "&player=" + ign;
+		var apiUrl = "https://api.hypixel.net/player?key=" + key + "&name=" + ign;
 		
 		return rp(apiUrl).then(body => {
             let responseData = JSON.parse(body);
-            return responseData;
+            let uuid = responseData.player.uuid;
+            var apiUrl = "https://api.hypixel.net/friends?key=" + key + "&uuid=" + uuid;
+		
+				return rp(apiUrl).then(body => {
+            	let responseData = JSON.parse(body);
+            	return responseData;
+        	});
         });
 	}
 
@@ -92,7 +98,7 @@ const rp = require('request-promise');
 	}
 
 	exports.getBoosters = function(key) {
-		var apiUrl = "https://api.hypixel.net/booster?key=" + key;
+		var apiUrl = "https://api.hypixel.net/boosters?key=" + key;
 		
 		return rp(apiUrl).then(body => {
             let responseData = JSON.parse(body);
@@ -101,7 +107,7 @@ const rp = require('request-promise');
 	}
 
 	exports.getWatchdogInformations = function(key) {
-		var apiUrl = "https://api.hypixel.net/watchdog?key=" + key;
+		var apiUrl = "https://api.hypixel.net/watchdogstats?key=" + key;
 		
 		return rp(apiUrl).then(body => {
             let responseData = JSON.parse(body);

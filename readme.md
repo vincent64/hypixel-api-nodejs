@@ -1,7 +1,7 @@
 # Hypixel JavaScript API
 An easy-to-use Hypixel API Wrapper for Node.js.
 Coded with ❤ by `MineBlock64` !
-Version:  **0.1.3**
+Version:  **0.1.4**
 
 ## Installation
 ```npm i hypixel-api-nodejs```
@@ -14,7 +14,7 @@ The value returned by the function is a JavaScript Object already parsed that ca
 Every functions have this format:
 ```javascript
 hypixel.getPlayerByName(key, ign).then(player => {
-    console.log(player);
+    console.log(datas);
 }).catch(err => {
     console.log("ERROR: " + err);
 });
