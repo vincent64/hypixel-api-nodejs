@@ -142,8 +142,8 @@ hypixel.getLeaderboards(key).then(leaderboards => {   //Retrieve JavaScript Obje
 	var mmlb = leaderboards.leaderboards.MURDER_MYSTERY[0].leaders;   //Fetching top 15 overall leaders of Murder Mystery
 
 	for(i = 0; i < mmlb.length; i++) {
-		hypixel.getPlayerByUuid(key, mmbl[i]).then(player => {   //Request player's datas from the UUID
-			var ign = player.player.displayName;   //Getting In-Game Name value
+		hypixel.getPlayerByUuid(key, mmlb[i]).then(player => {   //Request player's datas from the UUID
+			var ign = player.player.displayname;   //Getting In-Game Name value
 			console.log(position + ". " + ign);
 			position++;
 		});
@@ -166,4 +166,5 @@ hypixel.getLeaderboards(key).then(leaderboards => {   //Retrieve JavaScript Obje
 13. TheFirstOracle
 14. MineBlock64
 15. YeoWun            */
+//NOTE: This example won't make a correct leaderboard due to the asynchronous methods. This is just an example of how you could use the api in this way!
 ```
