@@ -1,7 +1,8 @@
 # Hypixel JavaScript API
 An easy-to-use Hypixel API Wrapper for Node.js.
 Coded with ❤ by `MineBlock64` !
-Version:  **0.1.4**
+Version:  **0.1.5**
+[![GitHub issues](https://img.shields.io/github/issues/VincentPhilippe64/hypixel-api-nodejs)](https://github.com/VincentPhilippe64/hypixel-api-nodejs/issues)
 
 ## Installation
 ```npm i hypixel-api-nodejs```
@@ -46,11 +47,6 @@ hypixel.getGuildById(key, id);
 Get guild informations from a members' UUID:
 ```javascript
 hypixel.getGuildByPlayer(key, uuid);
-```
-
-Get player's friends from its In-Game Name:     (ATTENTION: This function use two requests, your key will then be used two times!)
-```javascript
-hypixel.getFriendsByName(key, ign);
 ```
 
 Get player's friends from its UUID:
