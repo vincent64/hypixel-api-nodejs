@@ -55,21 +55,6 @@ const rp = require('request-promise');
         });
 	}
 
-	exports.getFriendsByName = function(key, ign) {
-		var apiUrl = "https://api.hypixel.net/player?key=" + key + "&name=" + ign;
-		
-		return rp(apiUrl).then(body => {
-            let responseData = JSON.parse(body);
-            let uuid = responseData.player.uuid;
-            var apiUrl = "https://api.hypixel.net/friends?key=" + key + "&uuid=" + uuid;
-		
-				return rp(apiUrl).then(body => {
-            	let responseData = JSON.parse(body);
-            	return responseData;
-        	});
-        });
-	}
-
 	exports.getKeyInformations = function(key) {
 		var apiUrl = "https://api.hypixel.net/key?key=" + key;
 		

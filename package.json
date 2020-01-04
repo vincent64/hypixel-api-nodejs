@@ -1,6 +1,6 @@
 {
   "name": "hypixel-api-nodejs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Easy-to-use Hypixel Wrapper for your project!",
   "license": "MIT",
   "repository": "VincentPhilippe64/hypixel-api-nodejs",
