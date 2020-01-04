@@ -14,7 +14,7 @@ The value returned by the function is a JavaScript Object already parsed that ca
 Every functions have this format:
 ```javascript
 hypixel.getPlayerByName(key, ign).then(player => {
-    console.log(datas);
+    console.log(player);
 }).catch(err => {
     console.log("ERROR: " + err);
 });
