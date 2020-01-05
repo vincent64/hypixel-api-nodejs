@@ -22,7 +22,7 @@ hypixel.getPlayerByName(key, ign).then(player => {
 ```
 
 
-### Functions
+### Methods
 
 Get player informations from the In-Game Name:
 ```javascript
