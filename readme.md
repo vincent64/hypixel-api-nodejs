@@ -76,7 +76,7 @@ hypixel.getSession(key, uuid);
 
 Get Watchdog informations:
 ```javascript
-hypixel.getWatchdogInformations(key, uuid);
+hypixel.getWatchdogInformations(key);
 ```
 
 
